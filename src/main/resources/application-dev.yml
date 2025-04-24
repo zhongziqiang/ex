@@ -3,6 +3,24 @@ spring:
     url: jdbc:mysql://127.0.0.1:3307/test?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&serverTimezone=PRC&useSSL=false
     username: root
     password: 123456
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+    consumer:
+      group-id: my-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: test
+      username: zzq  # 如果需要认证
+      password: '123456'  # 如果需要认证
+      authentication-database: admin  # 认证数据库
 
 mybatis-plus:
   configuration:

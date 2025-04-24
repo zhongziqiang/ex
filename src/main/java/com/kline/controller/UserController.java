@@ -26,7 +26,7 @@ public class UserController {
     @Operation(summary = "用户列表")
     @PostMapping(value = "/userList")
     public Result userList(@RequestBody User user) {
-        log.info("user", JSONUtil.toJsonStr(user));
+        log.info("user:{}", JSONUtil.toJsonStr(user));
         return Result.success(userService.list());
     }
 }
