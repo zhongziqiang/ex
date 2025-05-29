@@ -1,4 +1,4 @@
-# Kline 项目文档 (Java版)
+# Kline 项目文档
 
 ## 项目概述
 GitHub 项目 [zhongziqiang/kline](https://github.com/zhongziqiang/kline) 是一个基于Java的区块链数据工具库，主要功能：
@@ -7,11 +7,9 @@ GitHub 项目 [zhongziqiang/kline](https://github.com/zhongziqiang/kline) 是一
 2. **ERC20区块扫描** - 以太坊ERC20代币交易监听
 
 ## 技术栈
-- 语言：Java 11+
+- 语言：Java 17+
 - 依赖库：
     - Web3j (以太坊交互)
-    - OkHttp (HTTP请求)
-    - Jackson (JSON处理)
     - Lombok (简化代码)
 
 ## 功能特性
