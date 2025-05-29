@@ -6,6 +6,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 import org.springframework.web.socket.TextMessage;
 import org.springframework.web.socket.WebSocketSession;
 import org.springframework.web.socket.handler.TextWebSocketHandler;
+
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -27,8 +28,7 @@ public class MyWebSocketHandler extends TextWebSocketHandler {
         // 广播消息给所有客户端
         for (WebSocketSession webSocketSession : sessions) {
             if (webSocketSession.isOpen()) {
-                webSocketSession.sendMessage(new TextMessage(
-                        "Echo: " + message.getPayload()));
+                webSocketSession.sendMessage(new TextMessage("Echo: " + message.getPayload()));
             }
         }
     }

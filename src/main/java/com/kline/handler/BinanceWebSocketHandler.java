@@ -12,7 +12,7 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 public class BinanceWebSocketHandler extends TextWebSocketHandler {
 
     private final ObjectMapper objectMapper = new ObjectMapper();
-    private boolean status = true;
+    private boolean status = false;
 
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
