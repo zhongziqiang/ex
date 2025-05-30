@@ -32,7 +32,7 @@ public class EthScannerServiceImpl implements ScannerService {
     private final Web3j web3j;
     //主网 https://mainnet.infura.io/v3/57388f5634fd4ef6b9ed09b66929c1e5
     //测试网 https://sepolia.infura.io/v3/57388f5634fd4ef6b9ed09b66929c1e5
-    private String url = "https://mainnet.infura.io/v3/57388f5634fd4ef6b9ed09b66929c1e5";
+    private String url = "https://sepolia.infura.io/v3/57388f5634fd4ef6b9ed09b66929c1e5";
 
 
 
@@ -65,6 +65,10 @@ public class EthScannerServiceImpl implements ScannerService {
                 new TokenConfig("USDC", "0xa0b86a33e6441d50ea7c19b6e6f8cf6d68e72f02", 6, 12));
         tokenConfigMap.put("0x6b175474e89094c44da98b954eedeac495271d0f",
                 new TokenConfig("DAI", "0x6b175474e89094c44da98b954eedeac495271d0f", 18, 12));
+
+        //测试网 USDT代币地址
+        tokenConfigMap.put("0x8491bfacfc2b7d7f918490ac976f3fcc656b24f6",
+                new TokenConfig("USDT", "0x8491bfacfc2b7d7f918490ac976f3fcc656b24f6", 6, 12));
     }
 
 
