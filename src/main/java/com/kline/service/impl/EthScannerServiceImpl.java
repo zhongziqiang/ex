@@ -30,7 +30,11 @@ import java.util.concurrent.ConcurrentHashMap;
 public class EthScannerServiceImpl implements ScannerService {
 
     private final Web3j web3j;
+    //主网 https://mainnet.infura.io/v3/57388f5634fd4ef6b9ed09b66929c1e5
+    //测试网 https://sepolia.infura.io/v3/57388f5634fd4ef6b9ed09b66929c1e5
     private String url = "https://mainnet.infura.io/v3/57388f5634fd4ef6b9ed09b66929c1e5";
+
+
 
     // 最后扫描的区块号
     private BigInteger lastScannedBlock = BigInteger.ZERO;
