@@ -22,9 +22,7 @@ GitHub 项目 [zhongziqiang/kline](https://github.com/zhongziqiang/kline) 是一
 ```java
 // 支持交易所
 public enum Exchange {
-    BINANCE,
-    HUOBI,
-    OKEX
+    BINANCE
 }
 
 // K线周期
