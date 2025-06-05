@@ -57,7 +57,7 @@ public class TronScannerServiceImpl implements ScannerService {
         this.apiWrapper = new ApiWrapper(
                 Constant.TRONGRID_SHASTA,
                 Constant.TRONGRID_SHASTA_SOLIDITY,
-                "770aaf4cf67446036bcf299562895fdee491ca7b833cc2db3af9cdd414907788"  //
+                "770aaf4cf67446036bcf299562895fdedgr46a7b833cc2db3af9cdd414907788"  //
         );
     }
 
