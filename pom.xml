@@ -97,6 +97,22 @@
             <artifactId>bitcoinj-core</artifactId>
             <version>0.17</version>
         </dependency>
+        <dependency>
+            <groupId>io.github.tronprotocol</groupId>
+            <artifactId>trident</artifactId>
+            <version>0.10.0</version>
+        </dependency>
+        <!-- 解决com.google.protobuf冲突 -->
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>4.29.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-javalite</artifactId>
+            <version>4.29.3</version>
+        </dependency>
     </dependencies>
 
     <build>

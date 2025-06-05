@@ -232,7 +232,7 @@ public class EthScannerServiceImpl implements ScannerService {
     }
 
 
-    @Scheduled(fixedDelay = 10_000)
+    //@Scheduled(fixedDelay = 10_000)
     public void scanBlocks() {
         scanner();
     }
