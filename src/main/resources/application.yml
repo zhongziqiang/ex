@@ -1,7 +1,0 @@
-server:
-  port: 8899
-spring:
-  application:
-    name: kline
-  profiles:
-    active: dev
