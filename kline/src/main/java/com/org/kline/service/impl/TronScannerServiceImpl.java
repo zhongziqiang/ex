@@ -54,7 +54,7 @@ public class TronScannerServiceImpl implements ScannerService {
 
     public TronScannerServiceImpl() {
         initTokenConfigs();
-        // 连接主网或者测试网,测试网不需要私钥
+        // 连接主网或者测试网
         this.apiWrapper = new ApiWrapper(
                 Constant.TRONGRID_SHASTA,
                 Constant.TRONGRID_SHASTA_SOLIDITY,

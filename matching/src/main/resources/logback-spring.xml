@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- 定义日志文件存储路径 -->
+    <property name="PROJECT_NAME" value="KLINE" />
+    <property name="LOG_HOME" value="/Users/Apple/Desktop/log/${PROJECT_NAME}" />
+    <property name="INFO_LOG_PATH" value="${LOG_HOME}/info" />
+    <property name="ERROR_LOG_PATH" value="${LOG_HOME}/error" />
+
+    <!-- 控制台输出 -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- INFO 级别日志 -->
+    <appender name="INFO_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${INFO_LOG_PATH}/info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 按天滚动，归档文件名为 info.yyyy-MM-dd.log -->
+            <fileNamePattern>${INFO_LOG_PATH}/info.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 保留最近 7 天的日志 -->
+            <maxHistory>7</maxHistory>
+            <!-- 总日志文件大小限制，例如 2GB -->
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- ERROR 级别日志 -->
+    <appender name="ERROR_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${ERROR_LOG_PATH}/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- 按天滚动，归档文件名为 error.yyyy-MM-dd.log -->
+            <fileNamePattern>${ERROR_LOG_PATH}/error.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 保留最近 7 天的日志 -->
+            <maxHistory>7</maxHistory>
+            <!-- 总日志文件大小限制，例如 2GB -->
+            <totalSizeCap>2GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+    </appender>
+
+    <!-- 根日志配置 -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="INFO_FILE" />
+        <appender-ref ref="ERROR_FILE" />
+    </root>
+
+</configuration>

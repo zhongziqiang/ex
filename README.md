@@ -41,6 +41,7 @@ GitHub 项目 [zhongziqiang/kline](https://github.com/zhongziqiang/kline) 是一
 - 依赖库：
     - Web3j (以太坊交互)
     - Lombok (简化代码)
+    - disruptor (高性能撮合服务)
 
 ## 功能特性
 
