@@ -12,8 +12,8 @@
     <artifactId>ex</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>kline</name>
-    <description>kline</description>
+    <name>ex</name>
+    <description>ex</description>
     <url/>
     <licenses>
         <license/>
