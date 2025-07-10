@@ -21,6 +21,10 @@ spring:
       username: zzq  # 如果需要认证
       password: '123456'  # 如果需要认证
       authentication-database: admin  # 认证数据库
+    redis:
+      host: localhost
+      port: 6379
+      database: 0
 
 mybatis-plus:
   configuration:
@@ -39,7 +43,7 @@ springdoc:
     - group: 'default'
       display-name: '测试'
       paths-to-match: '/**'
-      packages-to-scan: com.kline
+      packages-to-scan: com.matching
   default-flat-param-object: true
 
 knife4j:

@@ -1,20 +1,40 @@
 package com.matching.dto;
 
-public class OrderEvent {
-    private long orderId;
-    private boolean isBuy; // true=买单, false=卖单
-    private double price;
-    private int quantity;
+import com.matching.entity.Order;
+import com.matching.enums.OrderCommand;
 
-    public void set(long orderId, boolean isBuy, double price, int quantity) {
-        this.orderId = orderId;
-        this.isBuy = isBuy;
-        this.price = price;
-        this.quantity = quantity;
+public class OrderEvent {
+    private Order order;
+    private OrderCommand command;
+    private long sequence;
+
+    public void clear() {
+        order = null;
+        command = null;
+        sequence = -1;
     }
 
-    public long getOrderId() { return orderId; }
-    public boolean isBuy() { return isBuy; }
-    public double getPrice() { return price; }
-    public int getQuantity() { return quantity; }
+    public Order getOrder() {
+        return order;
+    }
+
+    public void setOrder(Order order) {
+        this.order = order;
+    }
+
+    public OrderCommand getCommand() {
+        return command;
+    }
+
+    public void setCommand(OrderCommand command) {
+        this.command = command;
+    }
+
+    public long getSequence() {
+        return sequence;
+    }
+
+    public void setSequence(long sequence) {
+        this.sequence = sequence;
+    }
 }
