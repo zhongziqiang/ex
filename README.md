@@ -37,7 +37,7 @@ GitHub 项目 [zhongziqiang/kline](https://github.com/zhongziqiang/kline) 是一
 2. **ERC20区块扫描** - 以太坊ERC20代币交易监听
 
 ## 技术栈
-- 语言：Java 17+
+- 语言：Java 21+
 - 依赖库：
     - Web3j (以太坊交互)
     - Lombok (简化代码)
